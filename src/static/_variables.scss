@@ -1,0 +1,18 @@
+$backgroundColor: #373e41;
+$highlightfont: 'Poppins', sans-serif;
+$highlightTextColor: #e6d5ad;
+
+@mixin link {
+    font-family: $highlightfont;
+    font-size: 1.5em;
+    font-weight: bold;
+    text-decoration: none;
+    color: $highlightTextColor;
+}
+
+@mixin texthover {
+    animation-duration: 0.05s;
+    animation-name: flicker;
+    animation-iteration-count: infinite;
+    animation-direction: reverse;
+}

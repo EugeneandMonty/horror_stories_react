@@ -5,6 +5,14 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  background-image: url(./static/images/giphy55.gif);
+  background-color: rgb(16, 12, 24);
+  background-size: cover;
+  background-attachment: fixed;
+  background-blend-mode:lighten;
+  background-position: center;
+  
 }
 
 code {

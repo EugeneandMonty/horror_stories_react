@@ -1,0 +1,66 @@
+.sect {
+    margin: 150px auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.slider {
+    display: grid;
+    grid-template-columns: repeat(4, 4fr);
+    justify-content: center;
+    width: 80%;
+    animation-name: transform;
+    animation-duration: 1s;
+    margin: auto 2%;
+}
+
+.content {
+    text-decoration: none;
+    background-image: url(./images/doll.png);
+    background-size: cover;
+    background-position:center;
+    margin: 1%;
+    color: white;
+    font-family: $highlightfont;
+    opacity: 80%;
+    transition-duration: 3s;
+    &:hover {
+        opacity: 100%;
+        animation-duration: 0.05s;
+        animation-name: content-flicker;
+        animation-direction:normal;
+        animation-iteration-count: infinite;
+    }
+
+    .title_author {
+        padding-top: 60%;
+        .description {
+            margin: 0% 2% 2% 2%;
+            text-align: center;
+            font-size: 0.8em;
+            text-align: justify;
+        }
+        .ttl_com {            
+            display: flex;
+            justify-content: center;
+            .ttl {
+                margin: 0% 0% 0% 2%;
+                font-size: 1.3em;
+            }
+        }
+    }
+}
+
+.arr_down {
+    cursor: pointer;
+    filter: sepia(100%);
+    margin: 2%;
+    &:hover {
+        animation-duration: 0.1s;
+        animation-name: dropdown-flicker;
+        animation-direction:normal;
+        animation-iteration-count: infinite;
+    }
+}

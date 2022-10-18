@@ -1,0 +1,145 @@
+/* font-family: 'Nosifer', cursive;
+font-family: 'Poppins', sans-serif;
+font-family: 'Raleway', sans-serif;
+*/
+@import "./animations";
+@import "./variables";
+
+// HEADER
+
+.nav_bar {
+    background-color: $backgroundColor;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    height: 100px;
+    top: 0;
+    z-index: 666;
+}
+  
+.account_link {
+    width: 30%;
+    text-align: right;
+    a {
+        @include link;
+        margin-right: 10%;
+        &:hover {
+            @include texthover;
+        }
+    }
+}  
+
+.logo {
+    margin: 2% 5%;
+    p {
+        color: $highlightTextColor;
+        font-family: 'Nosifer', cursive;
+        font-size: 2.7em;
+        text-align: left;
+        margin: auto;
+        }    
+}
+
+  /* Dropdown menu */
+  
+.compact_menu_image {
+    margin-right: 4%;
+    filter: sepia(100%);
+    display: none;
+    &:hover {
+        animation-duration: 0.1s;
+        animation-name: dropdown-flicker;
+        animation-direction:normal;
+        animation-iteration-count: infinite;;
+    }
+    img {
+        filter: sepia(100%);
+        cursor: pointer;
+    }
+  }
+
+.dropdown_menu {
+    width: 250px;
+    height: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: $backgroundColor;
+    position: fixed;
+    top: 100px;
+    right: 0;
+    z-index: 665;
+    animation-duration: 0.5s;
+    animation-name: slide;
+    transition: 5s;
+    a {
+        @include link;
+        &:hover {
+            @include texthover;
+        }
+    }
+}
+
+//CONTENT
+
+@import "./mainContent";
+
+
+// FOOTER
+
+footer {
+    background-color: $backgroundColor;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    font-family: $highlightfont;
+    color: rgb(233, 66, 66);
+    text-align: center;
+    font-size: 1em;
+    z-index: 100;
+    p {
+        margin: auto;
+    }
+}
+
+// DISPLAYNONE
+
+.displaynone {
+    display: none;
+}
+
+// MOBILE
+
+@media screen and (min-width: 1820px) {
+    .slider{grid-template-columns: repeat(5, 5fr);}
+}
+
+@media screen and (max-width: 1250px) {
+    .slider{grid-template-columns: repeat(3, 3fr);}
+}
+
+@media screen and (max-width: 1050px) {
+    .compact_menu_image {display: unset;}
+    .account_link {display: none;}
+}
+
+@media screen and (max-width: 900px) {
+    .slider{grid-template-columns: repeat(2, 2fr);}
+}
+
+@media screen and (min-width: 1050px) {
+    .dropdown_menu {display: none;}
+}
+
+@media screen and (max-width: 680px) {
+    .logo p {font-size: 2em;}
+    .slider{grid-template-columns: repeat(1, 1fr);}
+}
+
+@media screen and (max-width: 450px) {
+    .logo p {font-size: 1.4em;}
+    .dropdown_menu{width: 200px;}
+}
