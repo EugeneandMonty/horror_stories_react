@@ -1,7 +1,7 @@
 import React from 'react'
 import arrow from './static/images/double_arrow-modified.png'
 import Section from './Section';
-import data from './data'
+import data from '../data'
 import { useState } from 'react';
 
 

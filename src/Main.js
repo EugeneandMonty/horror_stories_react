@@ -1,30 +1,40 @@
 import React from 'react';
-import Header from './Header';
-import Footer from './Footer';
-import Content from './Content';
-import './static/main.scss';
+import Header from './main/Header';
+import Footer from './main/Footer';
+import Content from './main/Content';
+import Window from './main/Window';
+import DropDown from './main/DropDown';
+import './main/static/main.scss';
 import { useState } from 'react';
-import { display } from './middleware';
 
 function Main() {
 
-  const [state, setState] = useState(display[0]);
-  const OpenClose = () => {state === display[0] ? setState(display[1]) : setState(display[0])};
-
   const [footerState, setFooterState] = useState(true);
-  const ShowHide = () => {
-    window.scrollY > 100  ? setFooterState(false) : setFooterState(true);
+  const ShowHide = () => {window.scrollY > 100  ? setFooterState(false) : setFooterState(true);}
+
+  const [window_log, setWindow_log] = useState(false);
+  const OpenWindow = () => {
+    if (!window_log) {
+      setWindow_log(true); setState(false)
+    } else {
+      setWindow_log(false)
+    }
   }
+
+  const [state, setState] = useState(false);
+  const OpenClose = () => {!state ? setState(true) : setState(false)};
 
   window.addEventListener('scroll', ShowHide)
 
   return (
-    <section>
+    <section id='main'>
       <Header
-      state={state}
       OpenClose={OpenClose}
+      OpenWindow={OpenWindow}
       />  
+      {state ? <DropDown OpenWindow={OpenWindow} /> : null }
       <Content/>
+      {window_log ? <Window OpenWindow={OpenWindow}/> : null}
       {footerState ? <Footer/> : null}
     </section>
   )

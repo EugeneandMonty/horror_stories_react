@@ -86,6 +86,8 @@ font-family: 'Raleway', sans-serif;
 //CONTENT
 
 @import "./mainContent";
+@import "./mainWindow";
+
 
 
 // FOOTER
@@ -117,6 +119,10 @@ footer {
     .slider{grid-template-columns: repeat(6, 6fr);}
 }
 
+@media screen and (max-width: 1500px) {
+    .window {width: 40%; left: 30%}
+}
+
 @media screen and (max-width: 1250px) {
     .slider{grid-template-columns: repeat(3, 3fr);}
 }
@@ -124,6 +130,7 @@ footer {
 @media screen and (max-width: 1050px) {
     .compact_menu_image {display: unset;}
     .account_link {display: none;}
+    .window {width: 50%; left: 25%}
 }
 
 @media screen and (max-width: 900px) {
@@ -137,9 +144,12 @@ footer {
 @media screen and (max-width: 680px) {
     .logo p {font-size: 2em;}
     .slider{grid-template-columns: repeat(1, 1fr);}
+    .window {width: 80%; left: 10%}
 }
 
 @media screen and (max-width: 450px) {
     .logo p {font-size: 1.4em;}
     .dropdown_menu{width: 200px;}
 }
+
+

@@ -1,9 +1,8 @@
 import React from 'react'
-import './static/main.scss';
 import dropdown from './static/images/menu-modified.png'
 
 
-const Header = ({state, OpenClose}) => {
+const Header = ({OpenClose, OpenWindow}) => {
 
   return (
     <header>
@@ -13,18 +12,12 @@ const Header = ({state, OpenClose}) => {
             </div>
             <div className='account_link'>
                 <a href='#'>About</a>
-                <a href='#'>Account</a>
+                <a href='#' onClick={OpenWindow}>Account</a>
             </div>
             <div className='compact_menu_image'>
                 <img src={dropdown} onClick={OpenClose}/>
             </div>
         </nav>
-
-        <div className={`dropdown_menu ${state}`}>
-            <a href='#'>About</a>
-            <a href='#'>Account</a>
-        </div>
-
     </header>
   )
 }

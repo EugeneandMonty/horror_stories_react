@@ -6,13 +6,12 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 
-  background-image: url(./static/images/giphy55.gif);
-  background-color: rgb(16, 12, 24);
+  background-image: url(./main/static/images/giphy55.gif);
+  background-color: rgb(40, 44, 42);
   background-size: cover;
   background-attachment: fixed;
-  background-blend-mode:lighten;
+  background-blend-mode:exclusion;
   background-position: center;
-  
 }
 
 code {
