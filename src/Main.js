@@ -12,7 +12,6 @@ function Main() {
   const OpenClose = () => {state === display[0] ? setState(display[1]) : setState(display[0])};
 
   const [footerState, setFooterState] = useState(true);
-
   const ShowHide = () => {
     window.scrollY > 100  ? setFooterState(false) : setFooterState(true);
   }

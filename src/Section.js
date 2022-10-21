@@ -1,11 +1,11 @@
 import React from 'react'
 import StoryCard from './StoryCard'
-import data from './data'
 
-const Section = () => {
 
-  return (     
+const Section = ({data}) => {
 
+  return ( 
+     
       <div className='slider'>
       
           {data.map((card) => 
@@ -17,8 +17,8 @@ const Section = () => {
           img_link = {card.img_link}
           />
           )}
-      </div>
 
+      </div>
 
   )
 }

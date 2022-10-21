@@ -11,8 +11,7 @@
     grid-template-columns: repeat(4, 4fr);
     justify-content: center;
     width: 80%;
-    animation-name: transform;
-    animation-duration: 1s;
+
     margin: auto 2%;
 }
 
@@ -25,7 +24,7 @@
     color: white;
     font-family: $highlightfont;
     opacity: 80%;
-    transition-duration: 3s;
+    transition-duration: 2s;
     &:hover {
         opacity: 100%;
         animation-duration: 0.05s;
