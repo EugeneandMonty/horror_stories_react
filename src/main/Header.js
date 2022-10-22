@@ -2,7 +2,7 @@ import React from 'react'
 import dropdown from './static/images/menu-modified.png'
 
 
-const Header = ({OpenClose, OpenWindow}) => {
+const Header = ({OpenClose, About, Account}) => {
 
   return (
     <header>
@@ -11,8 +11,8 @@ const Header = ({OpenClose, OpenWindow}) => {
                 <p> Horror stories </p>
             </div>
             <div className='account_link'>
-                <a href='#'>About</a>
-                <a href='#' onClick={OpenWindow}>Account</a>
+                {About}
+                {Account}
             </div>
             <div className='compact_menu_image'>
                 <img src={dropdown} onClick={OpenClose}/>

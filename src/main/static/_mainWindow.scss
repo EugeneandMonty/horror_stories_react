@@ -11,21 +11,20 @@
     animation-duration: 1s;
     animation-name: slide;
     text-align: center;
+    
   }
   
-  .inp1, .submit_login, input, .sign {
-    font-family: $highlightfont;
-    color: $highlightTextColor;
-    font-size: 1em;
-  }
+.form, button, input, .sign {
+  font-family: $highlightfont;
+  color: $highlightTextColor;
+  font-size: 1em;
+}
   
-  .inp1 {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 20%;
-  }
-  
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 20%;  
   input {
     width: 100%;
     height: 30px;
@@ -36,15 +35,14 @@
     color: rgb(56, 55, 52);
     line-height: 0px;
     outline: none !important;
-    &:hover {
+    &:focus {
         animation-duration: 0.05s;
         animation-name: content-flicker;
         animation-direction:reverse;
         animation-iteration-count: calc(50);
     }
   }
-  
-  .submit_login {
+  button {
     border-radius:1vmin;
     padding: 5%;
     margin: 4%;
@@ -57,30 +55,31 @@
         animation-direction:reverse;
         animation-iteration-count: infinite;
     }
+  }  
+}
+ 
+.sign {
+  text-align: center;
+  margin-top: 2%;
+  a {
+      text-decoration: none;
+      color: wheat;
+      &:hover {
+          animation-duration: 0.05s;
+          animation-name: flicker;
+          animation-direction:reverse;
+          animation-iteration-count: infinite;
+    }
   }
+  p {
+      margin: auto;
+  }
+}
 
-  .close {
-    position: absolute;
-    top: 0;
-    right: 0;
-    margin: 5px;
-    opacity: 50%;
-  }
-  
-  .sign {
-    text-align: center;
-    margin-top: 2%;
-    a {
-        text-decoration: none;
-        color: wheat;
-        &:hover {
-            animation-duration: 0.05s;
-            animation-name: flicker;
-            animation-direction:reverse;
-            animation-iteration-count: infinite;
-      }
-    }
-    p {
-        margin: auto;
-    }
+.close {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 5px;
+  opacity: 50%;
 }
