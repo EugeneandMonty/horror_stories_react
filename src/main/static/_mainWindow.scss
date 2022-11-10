@@ -1,11 +1,14 @@
 @import "./variables";
 
 .window {
-    width: 30%;
+    width: 600px;
     height: fit-content;
-    position: fixed;
-    top: 200px;
-    left: 35%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
     background-color: $backgroundColor;
     z-index: 2;
     animation-duration: 1s;
