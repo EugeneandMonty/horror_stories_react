@@ -28,15 +28,21 @@ function Main() {
 
   return (
     <section id='main'>
+
       <Header
       OpenClose={OpenClose}  
       About={<a href='#'>About</a>}
       Account={<a href='#' onClick={OpenWindow}>Account</a>}
       />  
+
       {state ? <DropDown OpenWindow={OpenWindow} /> : null }
+
       <Content/>
+
       {window_log ? <Window OpenWindow={OpenWindow}/> : null}
+
       {footerState ? <Footer/> : null}
+
     </section>
   )
 }

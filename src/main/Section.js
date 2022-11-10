@@ -13,8 +13,8 @@ const Section = ({data}) => {
           key = {card.id}
           title = {card.title}
           author = {card.author}
-          desc = {card.desc}
-          img_link = {card.img_link}
+          desc = {card.short_description}
+          img_link = {card.story_image}
           />
           )}
 

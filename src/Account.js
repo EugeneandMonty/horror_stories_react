@@ -3,7 +3,11 @@ import React from 'react'
 const Account = () => {
     
   return (
-    <div>Account</div>
+    <div>
+      <h1>
+        HELLO!
+      </h1>
+    </div>
   )
 }
 
