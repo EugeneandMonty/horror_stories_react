@@ -10,7 +10,7 @@ const Section = ({data}) => {
       
           {data.map((card) => 
           <StoryCard
-          key = {card.id}
+          key = {card._id}
           title = {card.title}
           author = {card.author}
           desc = {card.short_description}
